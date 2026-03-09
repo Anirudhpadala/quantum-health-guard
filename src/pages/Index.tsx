@@ -1,14 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import DiseaseCardsSection from "@/components/DiseaseCardsSection";
+import { Activity } from "lucide-react";
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <FeaturesSection />
+      <DiseaseCardsSection />
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-card py-12">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <div className="gradient-primary flex h-8 w-8 items-center justify-center rounded-lg">
+              <Activity className="h-4 w-4 text-primary-foreground" />
+            </div>
+            <span className="font-display font-bold">QuantumMedPredict</span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Human Multiple Disease Prediction using Quantum Machine Learning
+          </p>
+          <p className="mt-2 text-xs text-muted-foreground/60">
+            For educational purposes only. Not a substitute for medical advice.
+          </p>
+        </div>
+      </footer>
     </div>
   );
-};
-
-export default Index;
+}
