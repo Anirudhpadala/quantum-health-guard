@@ -19,7 +19,7 @@ export default function Index() {
             <div className="gradient-primary flex h-8 w-8 items-center justify-center rounded-lg">
               <Activity className="h-4 w-4 text-primary-foreground" />
             </div>
-            <span className="font-display font-bold">QuantumMedPredict</span>
+            <span className="font-display font-bold">Quantum Health Guard</span>
           </div>
           <p className="text-sm text-muted-foreground">
             Human Multiple Disease Prediction using Quantum Machine Learning
