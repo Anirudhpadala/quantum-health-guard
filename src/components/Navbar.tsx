@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/assessment", label: "Health Assessment" },
+  { to: "/results", label: "Results" },
   { to: "/dashboard", label: "Dashboard" },
 ];
 
@@ -20,7 +21,7 @@ export default function Navbar() {
           <div className="gradient-primary flex h-9 w-9 items-center justify-center rounded-lg">
             <Activity className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="font-display text-lg font-bold">QuantumMedPredict</span>
+          <span className="font-display text-lg font-bold">Quantum Health Guard</span>
         </Link>
 
         {/* Desktop */}
