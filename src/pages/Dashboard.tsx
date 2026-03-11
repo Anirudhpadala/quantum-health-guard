@@ -20,14 +20,21 @@ const COLORS = [
 ];
 
 // Demo data for dashboard
+const makeDemoResult = (id: string, disease: string, risk: number, riskLevel: "low" | "medium" | "high", confidence: number, modelAccuracy: number, quantumAdvantage: number): PredictionResult => ({
+  id, disease, risk, riskLevel, confidence, modelAccuracy, quantumAdvantage,
+  classicalAccuracy: modelAccuracy - quantumAdvantage,
+  timestamp: new Date(), inputs: {},
+  gateOperations: [], qubitMeasurements: [], featureEncoding: [],
+});
+
 const demoHistory: PredictionResult[] = [
-  { id: "1", disease: "Diabetes", risk: 32, riskLevel: "low", confidence: 94, modelAccuracy: 95, quantumAdvantage: 5, timestamp: new Date(), inputs: {} },
-  { id: "2", disease: "Heart Disease", risk: 58, riskLevel: "medium", confidence: 91, modelAccuracy: 93, quantumAdvantage: 6, timestamp: new Date(), inputs: {} },
-  { id: "3", disease: "Parkinson's", risk: 15, riskLevel: "low", confidence: 96, modelAccuracy: 97, quantumAdvantage: 4, timestamp: new Date(), inputs: {} },
-  { id: "4", disease: "Kidney Disease", risk: 72, riskLevel: "high", confidence: 89, modelAccuracy: 92, quantumAdvantage: 7, timestamp: new Date(), inputs: {} },
-  { id: "5", disease: "Liver Disease", risk: 44, riskLevel: "medium", confidence: 90, modelAccuracy: 91, quantumAdvantage: 5, timestamp: new Date(), inputs: {} },
-  { id: "6", disease: "Stroke", risk: 22, riskLevel: "low", confidence: 93, modelAccuracy: 94, quantumAdvantage: 6, timestamp: new Date(), inputs: {} },
-  { id: "7", disease: "Hypertension", risk: 61, riskLevel: "medium", confidence: 92, modelAccuracy: 95, quantumAdvantage: 4, timestamp: new Date(), inputs: {} },
+  makeDemoResult("1", "Diabetes", 32, "low", 94, 95, 5),
+  makeDemoResult("2", "Heart Disease", 58, "medium", 91, 93, 6),
+  makeDemoResult("3", "Parkinson's", 15, "low", 96, 97, 4),
+  makeDemoResult("4", "Kidney Disease", 72, "high", 89, 92, 7),
+  makeDemoResult("5", "Liver Disease", 44, "medium", 90, 91, 5),
+  makeDemoResult("6", "Stroke", 22, "low", 93, 94, 6),
+  makeDemoResult("7", "Hypertension", 61, "medium", 92, 95, 4),
 ];
 
 export default function Dashboard() {
